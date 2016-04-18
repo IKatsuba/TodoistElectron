@@ -19,14 +19,24 @@ module.exports = {
             experimentalDecorators: true
         }
     },
+    components_release: {
+        src: ['source/app.ts', 'source/windows/**/*.ts', 'source/windows/components/**/*.ts'],
+        dest: 'build/cache/',
+        options: {
+            sourceMap: false,
+            target: 'es6',
+            experimentalDecorators: true,
+            removeComments: true
+        }
+    },
     release: {
-        src: ['source/app.ts', 'source/windows/**/*.ts'],
+        src: ['source/app.ts', 'source/windows/**/*.ts', '!source/windows/components/**/*.ts'],
         dest: 'build/dist/',
         options: {
             sourceMap: false,
             target: 'es6',
-            removeComments: true,
-            experimentalDecorators: true
+            experimentalDecorators: true,
+            removeComments: true
         }
     }
 };

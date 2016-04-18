@@ -57,7 +57,29 @@ module.exports = {
                     components: getComponents(),
                     modules: getModules()
                 };
-            }
+            },
+
+            pretty: true
+        },
+        files: [{
+            expand: true,
+            cwd: 'build/cache/',
+            src: ['**/*.pug'],
+            dest: 'build/dist/',
+            ext: '.html'
+        }]
+    },
+    release: {
+        options: {
+            data(){
+                return {
+                    headScript: getBowerHeadScript(),
+                    components: getComponents(),
+                    modules: getModules()
+                };
+            },
+
+            pretty: false
         },
         files: [{
             expand: true,

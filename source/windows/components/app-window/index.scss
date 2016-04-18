@@ -3,7 +3,7 @@
 :host {
   ::content {
     webview {
-      @include position-fixed(40px, 0, 0, 0)
+      @include position(absolute, 0, 0, 0, 0)
     }
   }
 }

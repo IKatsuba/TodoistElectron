@@ -20,8 +20,6 @@ module.exports = function (grunt) {
 
     grunt.initConfig(config);
     grunt.registerTask('build', ['clean:build', 'sass:dev', 'sass:components_dev', 'typescript:dev', 'typescript:components_dev', 'copy:dev','copy:pug', 'pug:dev']);
-    grunt.registerTask('release', ['clean:release', 'sass:dev', 'sass:components_dev', 'typescript:dev', 'typescript:components_dev', 'copy:dev','copy:pug', 'pug:dev', 'copy:lib']);
-
-    // grunt.registerTask('release', ['clean:release', 'sass:release', 'typescript:release', 'copy:release']);
+    grunt.registerTask('release', ['clean:release', 'sass:release', 'sass:components_release', 'typescript:release', 'typescript:components_release', 'copy:release','copy:pug', 'pug:release', 'copy:lib']);
     grunt.registerTask('lib', ['clean:release', 'copy:lib']);
 };

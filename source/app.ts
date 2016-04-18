@@ -16,12 +16,10 @@ app.on('window-all-closed', function () {
 
 app.on('ready', function () {
     mainWindow = new BrowserWindow({
-        'width': 680,
+        'width': 601,
         'height': 600,
-        'min-width': 680,
-        // 'max-width': 340,
+        'min-width': 601,
         'min-height': 600,
-        // 'max-height': 600,
         frame: false
     });
 

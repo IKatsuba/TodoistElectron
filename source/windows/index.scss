@@ -1,4 +1,3 @@
-@import "scss/palette";
 @import "scss/fonts";
 @import "scss/mixin";
 
@@ -11,5 +10,4 @@ body {
   width: 100%;
   font-family: $fontRoboto;
   -webkit-user-select: none;
-  background-color: $primary-color-light;
 }

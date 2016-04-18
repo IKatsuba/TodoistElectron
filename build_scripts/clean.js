@@ -12,17 +12,6 @@ module.exports = {
         'build/dist/windows/components',
         'build/dist/windows/img',
         'build/dist/modules'
-        
-        // 'build/cache/app.js',
-        // 'build/cache/package.json',
-        // 'build/cache/windows/global-settings.js',
-        // 'build/cache/windows/index.css',
-        // 'build/cache/windows/index.css.map',
-        // 'build/cache/windows/index.html',
-        // 'build/cache/windows/index.js',
-        // 'build/cache/windows/components',
-        // 'build/cache/windows/img',
-        // 'build/cache/windows/modules'
     ],
     release: ['build/dist', 'build/cache', 'build/release/dist', 'build/release/bin']
 };

@@ -1,33 +1,37 @@
+var files = [{
+    expand: true,
+    cwd: 'source/',
+    src: ['**/**.scss', '!windows/components/**/*.scss'],
+    dest: 'build/dist',
+    ext: '.css'
+}];
+
+var components_files = [{
+    expand: true,
+    cwd: 'source/',
+    src: ['windows/components/**/*.scss'],
+    dest: 'build/cache',
+    ext: '.css'
+}];
+
+var release_options = {
+    sourcemap: 'none',
+    style: 'compressed'
+};
+
 module.exports = {
     components_dev: {
-        files: [{
-            expand: true,
-            cwd: 'source/',
-            src: ['windows/components/**/*.scss'],
-            dest: 'build/cache',
-            ext: '.css'
-        }]
+        files: components_files
     },
     dev: {
-        files: [{
-            expand: true,
-            cwd: 'source/',
-            src: ['**/**.scss', '!windows/components/**/*.scss'],
-            dest: 'build/dist',
-            ext: '.css'
-        }]
+        files: files
+    },
+    components_release: {
+        files: components_files,
+        options: release_options
     },
     release: {
-        files: [{
-            expand: true,
-            cwd: 'source/',
-            src: ['**/**.scss'],
-            dest: 'build/cache',
-            ext: '.css'
-        }],
-        options: {
-            sourcemap: 'none',
-            style: 'compressed'
-        }
+        files: files,
+        options: release_options
     }
 };
