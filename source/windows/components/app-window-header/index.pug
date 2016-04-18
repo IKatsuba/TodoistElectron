@@ -1,0 +1,21 @@
+dom-module#app-window-header
+    template
+        style
+            include index.css
+
+        paper-header-panel.flex(on-dblclick="dblclick")
+            paper-toolbar
+                div
+                    content
+                .action
+                    paper-icon-button(on-click="minimize", icon="expand-more")
+
+                    template(is="dom-if", if="{{isMaxButtonVisible(isMaximize)}}")
+                        paper-icon-button(on-click="maximize", icon="unfold-more")
+
+                    template(is="dom-if", if="{{isMinButtonVisible(isMaximize)}}")
+                        paper-icon-button(on-click="unmaximize", icon="unfold-less")
+
+                    paper-icon-button(on-click="close", icon="close")
+    script
+        include index.js

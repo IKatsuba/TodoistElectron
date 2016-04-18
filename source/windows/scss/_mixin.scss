@@ -1,0 +1,26 @@
+@import "palette";
+
+@mixin position($position, $top: 'none', $bottom: 'none', $left: 'none', $right: 'none'){
+  position: $position;
+  @if $top != 'none'{
+    top: $top;
+  }
+  @if $bottom != 'none'{
+    bottom: $bottom;
+  }
+  @if $left != 'none'{
+    left: $left;
+  }
+  @if $right != 'none'{
+    right: $right;
+  }
+}
+
+
+@mixin position-fixed($top, $bottom, $left, $right) {
+  @include position(fixed, $top, $bottom, $left, $right);
+}
+
+@mixin button-color(){
+  color: $primary-text-color;
+}

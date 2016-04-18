@@ -1,0 +1,17 @@
+@import "../../scss/mixin";
+:host {
+  div.action {
+    @include position(absolute, 0, 'none', 'none', 0);
+  }
+
+  paper-header-panel {
+    paper-toolbar {
+      --paper-toolbar-background: #db4c3f;
+      --paper-toolbar-height: 40px;
+      -webkit-app-region: drag;
+      paper-icon-button {
+        -webkit-app-region: no-drag;
+      }
+    }
+  }
+}

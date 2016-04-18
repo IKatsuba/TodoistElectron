@@ -1,0 +1,28 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset='UTF-8')
+        title Todoist
+
+        link(rel="stylesheet", href="index.css")
+        script(src="global-settings.js")
+
+        if modules
+            each module in modules
+                script(src="modules/" + module + "/index.js")
+
+        if headScript
+            each script in headScript
+                if script.type == 'import'
+                    link(rel="import", href=script.src)
+                else
+                    script(src=script.src)
+
+        if components
+            each component in components
+                link(rel="import", href=component)
+    body
+        app-window(title="Todoist")
+            webview(src="https://ru.todoist.com/app")
+
+        script(src="index.js")

@@ -1,0 +1,5 @@
+@import "../../scss/mixin";
+
+:host {
+  @include position(absolute, 40px, 0, 0, 0)
+}

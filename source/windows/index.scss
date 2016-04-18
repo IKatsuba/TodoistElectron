@@ -1,0 +1,15 @@
+@import "scss/palette";
+@import "scss/fonts";
+@import "scss/mixin";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  font-family: $fontRoboto;
+  -webkit-user-select: none;
+  background-color: $primary-color-light;
+}
