@@ -6,7 +6,7 @@ module api {
     export var fs = require('fs');
 
     export function getCurrentWindow() {
-        return require('remote').getCurrentWindow();
+        return require('electron').remote.getCurrentWindow();
     }
 
     export function extend(target:any = {}, ...args:any[]) {

@@ -50,11 +50,11 @@ module Components {
                 : this.maximize(evt);
         }
     })
-    class AppWindowHeaderClass extends BaseClass {
+    export class AppWindowHeaderClass extends BaseClass {
         constructor(...args:any[]) {
             super(args);
         }
     }
 
-    export var AppWindowHeader = Polymer(new AppWindowHeaderClass());
+    Polymer(new AppWindowHeaderClass());
 }

@@ -9,11 +9,11 @@ module Components {
             value: ''
         }
     })
-    class AppWindowClass extends BaseClass {
+    export class AppWindowClass extends BaseClass {
         constructor(...args:any[]) {
             super(...args);
         }
     }
     
-    export var AppWindow = Polymer(new AppWindowClass());
+    Polymer(new AppWindowClass());
 }

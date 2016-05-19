@@ -1,12 +1,14 @@
 /// <reference path="../lib.d.ts/node/node.d.ts" />
 
-process.env.ROOT_DIR_ENV = __dirname;
+// process.env.ROOT_DIR_ENV = __dirname;
 
-var app = require('app');
+const electron = require('electron');
+// require('devtron').install();
+const app = electron.app;
 
-var path = require('path');
+const path = require('path');
 
-var BrowserWindow = require('browser-window');
+const BrowserWindow = electron.BrowserWindow;
 
 var mainWindow = null;
 
@@ -15,7 +17,7 @@ app.on('window-all-closed', function () {
 });
 
 app.on('ready', function () {
-    mainWindow = new BrowserWindow({
+    mainWindow = new BrowserWindow(<any>{
         'width': 601,
         'height': 600,
         'min-width': 601,
@@ -23,9 +25,10 @@ app.on('ready', function () {
         frame: false
     });
 
-    mainWindow.loadUrl(`file://${__dirname}/windows/index.html`);
+    mainWindow.loadURL(`file://${__dirname}/windows/index.html`);
     // mainWindow.openDevTools();
     mainWindow.on('closed', function () {
         mainWindow = null;
     });
+    mainWindow.show();
 });
